@@ -1,6 +1,7 @@
 const BASE_URL = "/";
 
 export const API_ROUTES = {
+  // examples
   AUTH: {
     LOGIN: `${BASE_URL}auth/login/`,
     REGISTER: `${BASE_URL}auth/register/`,
@@ -39,5 +40,10 @@ export const API_ROUTES = {
   ONE_TIME_LINKS: {
     GENERATE: `${BASE_URL}one-time-link/generate/`,
     VALIDATE: `${BASE_URL}one-time-link/validate/`,
+  },
+
+  // new
+  OPENAI: {
+    PROMPT: `${BASE_URL}openai/prompt/`,
   },
 };
