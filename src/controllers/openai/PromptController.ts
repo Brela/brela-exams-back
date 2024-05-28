@@ -5,10 +5,16 @@ import CONFIG from "../../config";
 
 // for conversation history feature (which gives context to conversation), we need to count the tokens
 // in this case we use the "natural" package in order to keep as much history as possible. gpt 3.5 token limit - 4096
-const TOKEN_LIMIT = 4096;
+const TOKEN_LIMIT = 2000;
 let tokenCount: number;
 
-let conversationHistory = [{ role: "system", content: "Keep responses short, 2 short sentences max." }];
+let conversationHistory = [
+  {
+    role: "system",
+    content:
+      'You are an API that generates a list of test questions and answers. You should return exactly 10 questions and answers formatted as JSON. Each question should have a question text, four options labeled "a", "b", "c", and "d", and an answer. Ensure all keys and string values are enclosed in double quotes. DO NOT USE NESTED QUOTES OR any characters that require escaping within the question text or options. The response should be in the format: {"questions": [{"question": "string", "options": ["a: option1", "b: option2", "c: option3", "d: option4"], "answer": "string"}]}. Ensure the JSON is properly formatted.',
+  },
+];
 
 function addUserMessage(content: string) {
   conversationHistory.push({ role: "user", content: content });
@@ -26,7 +32,7 @@ function countTokens(text: string) {
 function truncateConversationHistory() {
   tokenCount = conversationHistory?.reduce((count, message) => count + countTokens(message.content), 0);
   // set this number as a buffer to not hit thte limit
-  while (tokenCount >= TOKEN_LIMIT - 1000) {
+  while (tokenCount >= TOKEN_LIMIT - 500) {
     if (conversationHistory.length > 2) {
       conversationHistory?.splice(1, 2);
     } else {
@@ -61,7 +67,7 @@ const PromptController: RequestHandler = async (req, res) => {
         model: "gpt-3.5-turbo",
         messages: conversationHistory,
         temperature: 0.5,
-        max_tokens: 150,
+        max_tokens: 2000,
       },
       {
         headers: {
