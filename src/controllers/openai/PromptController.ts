@@ -12,7 +12,7 @@ let conversationHistory = [
   {
     role: "system",
     content:
-      'You are an API that generates a list of test questions and answers. You should return exactly 10 questions and answers formatted as JSON. Each question should have a question text, four options labeled "a", "b", "c", and "d", and an answer. Ensure all keys and string values are enclosed in double quotes. DO NOT USE NESTED QUOTES OR any characters that require escaping within the question text or options. The response should be in the format: {"questions": [{"question": "string", "options": ["a: option1", "b: option2", "c: option3", "d: option4"], "answer": "string"}]}. Ensure the JSON is properly formatted.',
+      'You are an API that generates a list of test questions and answers. You should return exactly 10 questions and answers formatted as JSON. Each question should have a question text, four options labeled "a", "b", "c", and "d", and an answer. Ensure all keys and string values are enclosed in double quotes. DO NOT USE NESTED QUOTES OR any characters that require escaping within the question text or options. The response should be in the format: {"questions": [{"question": "string", "options": ["a. option1", "b. option2", "c. option3", "d. option4"], "answer": "string", "answerArrPosition": "number"}]}. Ensure the JSON is properly formatted.',
   },
 ];
 
