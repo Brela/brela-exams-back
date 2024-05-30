@@ -1,9 +1,10 @@
 {
-  "name": "omisoft-blog-template-back",
+  "name": "brela-exams-back",
   "version": "0.8.0",
   "description": "A very simple Express.js template for new small projects",
   "author": "OmiSoft.net LLC",
   "scripts": {
+    "start": "node dist/app.js",
     "dev": "cross-env NODE_ENV=development nodemon app.ts",
     "prod": "cross-env NODE_ENV=production ts-node app.ts",
     "test": "cross-env NODE_ENV=test jest --testTimeout=5000 --detectOpenHandles",
