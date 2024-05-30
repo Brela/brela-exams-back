@@ -5,7 +5,7 @@ import { PromptController } from "../controllers/openai";
 export default () => {
   const route = Router();
 
-  route.post(API_ROUTES.OPENAI.PROMPT, PromptController);
+  route.post("/prompt", PromptController);
 
   return route;
 };

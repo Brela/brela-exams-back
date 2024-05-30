@@ -16,7 +16,7 @@ export const TEXT = {
     postDoesntExists: "Post not found",
     wrongTypeUrl: "Url should contain only lowercase latin letters, numbers, hyphens and underscores",
     duplicateTitle: "Post with the same title already exists",
-    methodNotAllowed: "Method Not Allowed",
+    unmatchedRoutes: "No route found for this method",
   },
 };
 export const JOI_ERRORS = {
