@@ -12,5 +12,6 @@ export default cors({
     }
     return callback(null, true);
   },
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 });
