@@ -2,6 +2,8 @@
 <h1>Brela Exams (Backend)</h1>
 <h3>create AI generated exams in an instant</h3>
 
+Go to Frontend repo ==> [Brela Exams Frontend](https://github.com/Brela/brela-exams-front)
+
 ## Current Features
 
 ✓ Enter a prompt for the exam you want - it can be anything!
@@ -32,7 +34,7 @@ Next.js  |  React  |  TypeScript  |  CSS  |  Tailwind CSS  |  Mantine Components
 
 hosted on Vercel
 
-Go to Frontend repo ==> [Brela Exams Frontend](https://github.com/Brela/brela-exams-front)
+
 
 
 This backend was started with this template: <a href="https://github.com/OmiSoftNet/omisoft-blog-template-back?tab=readme-ov-file" target="_blank">omnisoft-blog-template-back</a>
