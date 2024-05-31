@@ -1,5 +1,5 @@
 
-<h1>Brela Exams</h1>
+<h1>Brela Exams (Backend)</h1>
 <h3>create AI generated exams in an instant</h3>
 
 ## Current Features
