@@ -1,8 +1,40 @@
 
+<h1>Brela Exams (Backend)</h1>
+<h3>create AI generated exams in an instant</h3>
 
-# Brela Exams Backend
+Go to Frontend repo ==> [Brela Exams Frontend](https://github.com/Brela/brela-exams-front)
 
-## The Plan:
-### In this app, you enter a prompt for specific exam that you want ( for example: beginner Spanish, or countires of the world ). That prompt hits the chatGPT API, returns your exam with 10 to 20 questions and answers. Then you can take that exam or print it out.
+## Current Features
 
-This backend was built beginning with this template: <a href="https://github.com/OmiSoftNet/omisoft-blog-template-back?tab=readme-ov-file" target="_blank">omnisoft-blog-template-back</a>
+✓ Enter a prompt for the exam you want - it can be anything!
+<br>
+✓ Your prompt hits the OpenAI API and returns the exam.
+<br>
+✓ You can view the answers by clicking the 👁 icon.
+
+## Planned Features
+
+<section width="400px">
+✏ Users can take the exam once it is generated and receive grades.
+<br>
+✏ Community Exams feature: Users can save exams to 'Community Exams'.
+  <br>
+✏ Moderator dashboard to approve community exams
+
+
+### Back End Tech:
+
+Node.js  |  MongoDB  |  Express  |  OpenAI API
+
+hosted on Railway
+
+### Front End Tech:
+
+Next.js  |  React  |  TypeScript  |  CSS  |  Tailwind CSS  |  Mantine Components
+
+hosted on Vercel
+
+
+
+
+This backend was started with this template: <a href="https://github.com/OmiSoftNet/omisoft-blog-template-back?tab=readme-ov-file" target="_blank">omnisoft-blog-template-back</a>
