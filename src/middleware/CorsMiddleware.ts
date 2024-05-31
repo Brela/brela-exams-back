@@ -1,10 +1,6 @@
 import cors from "cors";
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://brela-exams-front.vercel.app/",
-  "https://brela-exams-front.vercel.app",
-];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001", "https://brela-exams.vercel.app/"];
 
 export default cors({
   origin: (origin, callback) => {
