@@ -2,6 +2,7 @@ import { RequestHandler } from "express";
 import axios from "axios"; // needed to make requests to specific url at OpenAI API
 import natural from "natural"; // used to count tokens in message history
 import CONFIG from "../../config";
+import { basicSystemPromptConfig } from "./SystemPrompts";
 
 // for conversation history feature (which gives context to conversation), we need to count the tokens
 // in this case we use the "natural" package in order to keep as much history as possible. gpt 3.5 token limit - 4096
@@ -11,8 +12,8 @@ let tokenCount: number;
 let conversationHistory = [
   {
     role: "system",
-    content:
-      'You are an API that generates a list of test questions and answers. You should return exactly 10 questions and answers formatted as JSON. Each question should have a question text, four options labeled "a", "b", "c", and "d", and an answer. Ensure all keys and string values are enclosed in double quotes. DO NOT USE NESTED QUOTES OR any characters that require escaping within the question text or options. The response should be in the format: {"questions": [{"question": "string", "options": ["a. option1", "b. option2", "c. option3", "d. option4"], "answer": "string", "answerArrPosition": "number"}]}. Ensure the JSON is properly formatted.',
+    // initial prompt to setup the context of the conversation
+    content: basicSystemPromptConfig,
   },
 ];
 
